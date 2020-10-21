@@ -41,7 +41,10 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     arel (8.0.0)
+    ast (2.4.1)
+    backport (1.1.2)
     bcrypt (3.1.13)
+    benchmark (0.1.0)
     builder (3.2.4)
     capybara (3.32.1)
       addressable
@@ -61,6 +64,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    e2mmap (0.1.0)
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (5.1.2)
@@ -75,6 +79,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.4)
     jquery-rails (4.3.5)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -89,6 +94,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    maruku (0.7.3)
     method_source (1.0.0)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
@@ -97,6 +103,9 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    parallel (1.19.2)
+    parser (2.7.2.0)
+      ast (~> 2.4.1)
     pg (0.21.0)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -136,6 +145,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (3.0.0)
     rake (13.0.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
@@ -144,6 +154,9 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    reverse_markdown (2.0.0)
+      nokogiri
+    rexml (3.2.4)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
     rspec-expectations (3.9.1)
@@ -161,6 +174,18 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.2)
+    rubocop (0.92.0)
+      parallel (~> 1.10)
+      parser (>= 2.7.1.5)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.7)
+      rexml
+      rubocop-ast (>= 0.5.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (1.0.0)
+      parser (>= 2.7.1.5)
+    ruby-progressbar (1.10.1)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -178,6 +203,20 @@ GEM
     shoulda-context (1.2.2)
     shoulda-matchers (3.1.3)
       activesupport (>= 4.0.0)
+    solargraph (0.39.17)
+      backport (~> 1.1)
+      benchmark
+      bundler (>= 1.17.2)
+      e2mmap
+      jaro_winkler (~> 1.5)
+      maruku (~> 0.7, >= 0.7.3)
+      nokogiri (~> 1.9, >= 1.9.1)
+      parser (~> 2.3)
+      reverse_markdown (>= 1.0.5, < 3)
+      rubocop (~> 0.52)
+      thor (~> 1.0)
+      tilt (~> 2.0)
+      yard (~> 0.9, >= 0.9.24)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -196,6 +235,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.7.0)
     valid_attribute (2.0.0)
     warden (1.2.8)
       rack (>= 2.0.6)
@@ -204,6 +244,7 @@ GEM
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yard (0.9.25)
 
 PLATFORMS
   ruby
@@ -224,6 +265,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
   shoulda
+  solargraph
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
@@ -231,4 +273,4 @@ DEPENDENCIES
   valid_attribute
 
 BUNDLED WITH
-   2.0.1
+   2.1.4
