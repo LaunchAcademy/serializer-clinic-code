@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'faker'
 gem 'solargraph'
+gem 'active_model_serializers'
 
 group :development do
   gem 'listen', '~> 3.0.5'
